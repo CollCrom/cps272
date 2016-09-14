@@ -6,7 +6,8 @@ using namespace std;
 class MyClass
 {
 private:
-	int x, y, *z;
+	int x, y;
+	int *z = new int;
 public:
 	MyClass(int xx, int yy, int zz);
 	~MyClass();

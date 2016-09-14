@@ -9,7 +9,7 @@ MyClass::MyClass(int xx, int yy, int zz)
 
 MyClass::~MyClass()
 {
-	delete &z;
+	delete z;
 }
 
 void MyClass::print()
