@@ -2,6 +2,9 @@
 
 void main()
 {
+	int z1 = 3;
+	int z2 = 6;
+	int z3 = 9;
 	MyClass foo(1, 2, 3);
 	foo.print();
 	MyClass bar(4, 5, 6);

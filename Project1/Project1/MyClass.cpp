@@ -14,7 +14,9 @@ MyClass::~MyClass()
 
 void MyClass::print()
 {
-	cout << "x:" << x << " y:" << y << " z:" << *z << endl;
+	cout << "x:" << x;
+	cout << " y:" << y;
+	cout << " z:" << *z << endl;
 }
 
 void MyClass::set(int xx, int yy, int zz)
