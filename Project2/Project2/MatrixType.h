@@ -11,8 +11,8 @@ private:
 	int **matrix;
 public:
 	MatrixType(int r, int c);
-	~MatrixType();
 	void set(int value, int row, int col);
+	//MatrixType matrixMultiplication(const MatrixType &m);
 	MatrixType operator+(const MatrixType &m);
 	MatrixType operator-(const MatrixType &m);
 	MatrixType operator*(const MatrixType &m);
