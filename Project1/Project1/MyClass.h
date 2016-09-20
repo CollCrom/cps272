@@ -7,7 +7,7 @@ class MyClass
 {
 private:
 	int x, y;
-	int *z = new int;
+	int *z;
 public:
 	MyClass(int xx, int yy, int zz);
 	~MyClass();

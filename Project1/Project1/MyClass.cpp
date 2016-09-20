@@ -4,7 +4,8 @@ MyClass::MyClass(int xx, int yy, int zz)
 {
 	x = xx;
 	y = yy;
-	z = &zz;
+	z = new int;
+	*z = zz;
 }
 
 MyClass::~MyClass()
@@ -23,7 +24,7 @@ void MyClass::set(int xx, int yy, int zz)
 {
 	x = xx;
 	y = yy;
-	z = &zz;
+	*z = zz;
 }
 
 MyClass MyClass::operator=(const MyClass & m)
