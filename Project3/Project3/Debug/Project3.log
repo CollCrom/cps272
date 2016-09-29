@@ -1,5 +1,0 @@
-﻿  Source.cpp
-c:\users\collc\desktop\cps 272\project3\project3\source.cpp(59): error C3490: 'first' cannot be modified because it is being accessed through a const object
-  c:\users\collc\desktop\cps 272\project3\project3\source.cpp(55): note: while compiling class template member function 'void LinkedList<char>::print(void) const'
-  c:\users\collc\desktop\cps 272\project3\project3\source.cpp(34): note: see reference to function template instantiation 'void LinkedList<char>::print(void) const' being compiled
-  c:\users\collc\desktop\cps 272\project3\project3\source.cpp(26): note: see reference to class template instantiation 'LinkedList<char>' being compiled
