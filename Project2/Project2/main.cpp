@@ -43,6 +43,6 @@ void main()
 	m1->set(10, 1, 2);
 	m2->set(45, 2, 2);
 	cout << *m1 << endl << *m2;
-	delete m1;
-	delete m2;
+	//delete m1;
+	//delete m2;
 }

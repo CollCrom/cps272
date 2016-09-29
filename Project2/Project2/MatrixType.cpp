@@ -14,6 +14,11 @@ MatrixType::MatrixType(int r, int c)
 	}
 }
 
+MatrixType::~MatrixType()
+{
+	delete matrix;
+}
+
 void MatrixType::set(int value, int row, int col)
 {
 	this->matrix[row - 1][col - 1] = value;
