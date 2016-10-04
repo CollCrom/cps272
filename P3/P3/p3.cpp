@@ -23,7 +23,6 @@ protected:
 };
 void main()
 {
-	cout << "dicks";
 	LinkedList<char> c;
 	c.insert('D');
 	c.insert('B');
@@ -40,26 +39,59 @@ template<typename T>
 LinkedList<T>::LinkedList()
 {
 	first = NULL;
+	count = 0;
 }
 
 template<typename T>
 LinkedList<T>::~LinkedList()
-{}
+{
+	Node<T> *t = first;
+	while (t != NULL) 
+	{
+		first = first->link;
+		delete t;
+		t = first;
+	}
+	first = NULL;
+}
 
 template<typename T>
 void LinkedList<T>::print() const
 {
-	while (first->link != NULL)
+	Node<T> *temp = first;
+	while (temp != NULL)
 	{
-		cout << first->info << endl;
+		cout << temp->info << endl;
+		temp = temp->link;
 	}
 }
 
 template<typename T>
 void LinkedList<T>::insert(const T & item)
 {
-	Node<T> *temp = new Node<T>;
-	temp->link = NULL;
-	temp->info = item;
-	first = temp;
+	Node<T> *back = NULL, *temp = first;
+	Node<T> *n = new Node<T>;
+	n->info = item;
+	n->link = NULL;
+	if (first == NULL)
+		first = n;
+	else
+	{
+		while ((temp != NULL) && (temp->info < n->info))
+		{
+			back = temp;
+			temp = temp->link;
+		}
+		if (back == NULL)
+		{
+			n->link = first;
+			first = n;
+		}
+		else
+		{
+			n->link = temp;
+			back->link = n;
+		}
+	}
+
 }
